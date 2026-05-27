@@ -1,0 +1,375 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: url("thanks.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    position: relative;
+}
+
+/* DARK OVERLAY */
+body::before{
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo h2{
+    color: #00d9ff;
+}
+
+nav a{
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #00d9ff;
+}
+
+/* HERO */
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 8%;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.hero-content{
+    width: 50%;
+}
+
+.hero-content h1{
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p{
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.hero-buttons{
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn{
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.primary-btn{
+    background: #00d9ff;
+    color: black;
+}
+
+.secondary-btn{
+    border: 2px solid #00d9ff;
+    color: #00d9ff;
+}
+
+.primary-btn:hover{
+    transform: translateY(-4px);
+}
+
+.secondary-btn:hover{
+    background: #00d9ff;
+    color: black;
+}
+
+/* ==========================================================================
+   IMAGE & ANIMATION FIXES
+   ========================================================================== */
+
+/* Target the independent floating section images */
+.hanging-img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid rgba(255,255,255,0.8);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: 0.4s ease-in-out;
+    animation: hanging 3s ease-in-out infinite;
+}
+
+/* Target the grid card images separately to prevent clipping */
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: 0.4s ease-in-out;
+}
+
+/* Hover effects for both classes */
+.hanging-img:hover,
+.card-img:hover {
+    transform: scale(1.05);
+}
+
+/* HANGING ANIMATION */
+@keyframes hanging{
+    0%{
+        transform: rotate(2deg) translateY(0px);
+    }
+    50%{
+        transform: rotate(-2deg) translateY(10px);
+    }
+    100%{
+        transform: rotate(2deg) translateY(0px);
+    }
+}
+
+/* ==========================================================================
+   REST OF THE CONTENT SECTIONS
+   ========================================================================== */
+
+/* ABOUT */
+.about-section{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 8%;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    flex-wrap: wrap;
+}
+
+.about-content{
+    flex: 1;
+}
+
+.about-content h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #00d9ff;
+}
+
+.about-content p{
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* SECTION TITLE */
+.section-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2{
+    font-size: 40px;
+    color: #00d9ff;
+}
+
+.section-title p{
+    margin-top: 10px;
+    color: #ddd;
+}
+
+/* INITIATIVES */
+.initiatives{
+    padding: 80px 8%;
+}
+
+.initiative-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+}
+
+.initiative-card{
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.initiative-card:hover{
+    transform: translateY(-10px);
+}
+
+.card-content{
+    padding: 20px;
+}
+
+.card-content h3{
+    margin-bottom: 10px;
+    color: #00d9ff;
+}
+
+.card-content p{
+    line-height: 1.7;
+    color: #f1f1f1;
+}
+
+/* IMPACT */
+.impact-section{
+    padding: 80px 8%;
+}
+
+.impact-box{
+    background: linear-gradient(to right,#0077ff,#00d9ff);
+    color: white;
+    border-radius: 25px;
+    padding: 60px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.impact-box h2{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.impact-stats{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 25px;
+}
+
+.stat h3{
+    font-size: 40px;
+}
+
+.stat p{
+    margin-top: 10px;
+}
+
+/* VOLUNTEER */
+.volunteer-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 8%;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.volunteer-content{
+    width: 50%;
+}
+
+.volunteer-content h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #00d9ff;
+}
+
+.volunteer-content p{
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.volunteer-content button{
+    padding: 14px 28px;
+    border: none;
+    background: #00d9ff;
+    color: black;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.volunteer-content button:hover{
+    transform: translateY(-4px);
+}
+
+/* FOOTER */
+footer{
+    background: rgba(0,0,0,0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+
+    .hero-content,
+    .volunteer-content{
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero{
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .hero-content h1{
+        font-size: 40px;
+    }
+
+    .hanging-img{
+        width: 220px;
+        height: 220px;
+    }
+
+    header{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a{
+        margin: 0 10px;
+    }
+
+    .about-section,
+    .volunteer-section{
+        justify-content: center;
+        text-align: center;
+    }
+}
